@@ -1,0 +1,28 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: papeleria-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: papeleria_db
+      MYSQL_USER: papeleria_user
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - papeleria_data:/var/lib/mysql
+
+  sonarqube:
+    image: sonarqube:community
+    container_name: papeleria-sonarqube
+    ports:
+      - "9000:9000"
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+    profiles:
+      - calidad
+
+volumes:
+  papeleria_data:
+  sonarqube_data:
