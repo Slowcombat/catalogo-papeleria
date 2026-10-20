@@ -39,7 +39,6 @@ controlador  →  servicio  →  repositorio  →  MySQL
 | `servicio` | Negocio | Aplica las reglas de negocio y coordina las operaciones CRUD |
 | `repositorio` | Acceso a datos | Persistencia con Spring Data JPA |
 | `modelo` | Dominio | Entidad `Producto` |
-| `excepcion` | Transversal | Manejo de errores y respuestas HTTP |
 
 Los diagramas de clases y de arquitectura están en [`docs/diagramas`](docs/diagramas).
 
@@ -59,8 +58,7 @@ catalogo-papeleria/
     │   ├── controlador/
     │   ├── servicio/
     │   ├── repositorio/
-    │   ├── modelo/
-    │   └── excepcion/
+    │   └── modelo/
     ├── main/resources/
     │   ├── application.properties
     │   ├── templates/
@@ -85,7 +83,7 @@ catalogo-papeleria/
 
 4. Abrir Swagger UI: http://localhost:8080/swagger-ui/index.html
 
-## Endpoints
+## Endpoints planeados
 
 | Método | Ruta | Descripción |
 |---|---|---|

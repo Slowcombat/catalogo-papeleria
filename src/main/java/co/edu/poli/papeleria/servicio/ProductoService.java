@@ -1,21 +1,11 @@
 package co.edu.poli.papeleria.servicio;
 
-import co.edu.poli.papeleria.modelo.Producto;
-
-import java.util.List;
+import org.springframework.stereotype.Service;
 
 /**
- * Capa de negocio: contrato de las operaciones CRUD sobre Producto.
+ * Capa de negocio.
+ * Pendiente: operaciones CRUD de Producto (listar, buscar, crear, actualizar, eliminar).
  */
-public interface ProductoService {
-
-    List<Producto> listar();
-
-    Producto buscarPorId(Integer id);
-
-    Producto crear(Producto producto);
-
-    Producto actualizar(Integer id, Producto producto);
-
-    void eliminar(Integer id);
+@Service
+public class ProductoService {
 }
